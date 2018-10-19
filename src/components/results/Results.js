@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+// import { Link } from 'react-router-dom'
 
 class Results extends Component {
   render(){
@@ -20,13 +20,13 @@ class Results extends Component {
         )
       })
     ) : (
-      <div className="center">No vehicles match</div>
+      <div className="center">No results match</div>
     );
 
     return (
       <div>
         <div className="container home">
-          <h4 className="center">Fleet Input</h4>
+          <h4 className="center">Results</h4>
           {resultsData}
         </div>
       </div>
@@ -44,26 +44,3 @@ export default connect(mapStateToProps)(Results)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-
-// const Results = () => {
-//     return (
-//         <div className="container">
-//             <h4 className="center" >This is the Results page</h4>
-//             <p>Lorem ipsum is a placeholder text (filler text) in publishing and graphic design. It is used to demonstrate the graphics elements of a document, such as font, typography, and layout.</p>
-//         </div>
-//         )
-//     }
-
-// export default Results;
