@@ -7,7 +7,6 @@ const initState = {
   }
   
 const vehicleReducer = (state = initState, action) => {
-//   console.log(state);
   return state;
 }
 
