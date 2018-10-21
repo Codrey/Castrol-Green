@@ -1,128 +1,105 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom'
+
 
 class Summary extends Component {
   render(){
     // Cost Data Table  
-    const { cost } = this.props
-    const costData = cost.length ? (
-        cost.map(cost => {
-            return (
-            <div>
-                <table className="card highlight flow-text">
-                    <thead>
-                        <tr>
-                            <th>Cost</th>
-                        </tr>
-                    </thead>
-                    <thead>
-                        <tr className=" responsive-table">
-                            <th></th>
-                            <th>15W-40 Engine Oil</th>
-                            <th>Castrol Vecton RX Fuel Saver 10W-40</th>
-                        </tr>
-                    </thead>
-                    <tbody className="responsive-table">
-                        <tr>
-                            <td>{cost.eocTitle}</td>
-                            <td className="center">{cost.eocOil}</td>
-                            <td className="center">{cost.eocSaving}</td>
-                        </tr>
-                        <tr>
-                            <td>{cost.fcTitle}</td>
-                            <td className="center">{cost.fcOil}</td>
-                            <td className="center">{cost.fcSaving}</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-            )
-            })
-      ) : (
-        <div className="center">No Cost Data</div>
-      );
+    const costData = (
+        <div>
+            <table className="card highlight flow-text">
+                <thead>
+                    <tr>
+                        <th>{this.props.cost.title}</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr className=" responsive-table">
+                        <th></th>
+                        <th>{this.props.cost.eoTitle}</th>
+                        <th>{this.props.cost.rxTitle}</th>
+                    </tr>
+                </thead>
+                <tbody className="responsive-table">
+                    <tr>
+                        <td>{this.props.cost.eocTitle}</td>
+                        <td className="center">{this.props.cost.eocOil}</td>
+                        <td className="center">{this.props.cost.eocSaving}</td>
+                    </tr>
+                    <tr>
+                        <td>{this.props.cost.fcTitle}</td>
+                        <td className="center">{this.props.cost.fcOil}</td>
+                        <td className="center">{this.props.cost.fcSaving}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    )
 
     // Travel Data Table  
-    const { travel } = this.props
-    const travelData = travel.length ? (
-        travel.map(travel => {
-            return (
-            <div>
-                <table className="card highlight flow-text">
-                    <thead>
-                        <tr>
-                            <th>Travel</th>
-                        </tr>
-                    </thead>
-                    <tbody className="responsive-table">
-                        <tr>
-                            <td>{travel.fsTitle}</td>
-                            <td>{travel.fsResults}</td>
-                        </tr>
-                        <tr>
-                        <td>{travel.emdTitle}</td>
-                            <td>{travel.emdResults}</td>
-                        </tr>
-                        <tr>
-                        <td>{travel.pfsTitle}</td>
-                            <td>{travel.psfResults}</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-            )
-        })
-      ) : (
-        <div className="center">No Travel Data</div>
-      );
+    const travelData = (
+        <div>
+            <table className="card highlight flow-text">
+                <thead>
+                    <tr>
+                        <th>{this.props.travel.title}</th>
+                    </tr>
+                </thead>
+                <tbody className="responsive-table">
+                    <tr>
+                        <td>{this.props.travel.fsTitle}</td>
+                        <td>{this.props.travel.fsResults}</td>
+                    </tr>
+                    <tr>
+                        <td>{this.props.travel.emdTitle}</td>
+                        <td>{this.props.travel.emdResults}</td>
+                    </tr>
+                    <tr>
+                        <td>{this.props.travel.pfsTitle}</td>
+                        <td>{this.props.travel.psfResults}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    )
 
     // Environmental Data Table  
-    const { environment } = this.props
-    const environmentalData = environment.length ? (
-        environment.map(environment => {
-            return (
-            <div>
-                <table className="card highlight flow-text">
-                    <thead>
-                        <tr>
-                            <th>Environmental</th>
-                        </tr>
-                    </thead>
-    
-                    <tbody className="flow-text responsive-table">
-                        <tr>
-                            <td>{environment.ccrTitle}</td>
-                            <td>{environment.ccrResult}</td>
-                        </tr>
-                        <tr>
-                            <td>{environment.etTitle}</td>
-                            <td>{environment.etResult}</td>
-                        </tr>
-                    </tbody>
-                </table>
+    const environmentalData = (
+        <div>
+            <table className="card highlight flow-text">
+                <thead>
+                    <tr>
+                        <th>{this.props.environment.title}</th>
+                    </tr>
+                </thead>
 
-            </div>
-            )
-        })
-      ) : (
-        <div className="center">No Travel Data</div>
-      );
+                <tbody className="flow-text responsive-table">
+                    <tr>
+                        <td>{this.props.environment.ccrTitle}</td>
+                        <td>{this.props.environment.ccrResult}</td>
+                    </tr>
+                    <tr>
+                        <td>{this.props.environment.etTitle}</td>
+                        <td>{this.props.environment.etResult}</td>
+                    </tr>
+                </tbody>
+            </table>
 
-      const annualSavvings = (
+        </div>
+    )
 
-        <table className="card highlight flow-text">
+
+      const annualSavings = (
+
+        <table className="card highlight flow-text ">
             <thead>
                 <tr>
-                    <th>Annual Saving</th>
-                    <th>{cost.eocTitle} </th>
+                    <th className="center">{this.props.annualSavings.title}</th>
                 </tr>
             </thead>
             <tbody className="flow-text responsive-table">
                 <tr>
-                    <td>???</td>
+                    <td className="center">{this.props.annualSavings.result}</td>
                 </tr>
             </tbody>
         </table>
@@ -131,11 +108,11 @@ class Summary extends Component {
     return (
       <div>
         <div className="container home">
-          <h1 className="center">Summary</h1>
+
           {costData}
           {travelData}
           {environmentalData}
-          {annualSavvings}
+          {annualSavings}
             
         </div>
       </div>
@@ -147,7 +124,8 @@ const mapStateToProps = (state) => {
     return {
         cost: state.summary.cost,
         travel: state.summary.travel,
-        environment: state.summary.environmental
+        environment: state.summary.environmental,
+        annualSavings: state.summary.annualSavings
     }
   }
   
