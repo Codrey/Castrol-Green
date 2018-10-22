@@ -1,33 +1,97 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Results extends Component {
   render(){
-    const { userResults } = this.props
-    const resultsData = userResults.length ? (
-        userResults.map(results => {
-        return (
-        <div>
-            <div className="card" key={results.id}>
-                <div className="card-content">
-                <h1 className="card-title red-text">{results.title}</h1>
-                <p>{results.savings }</p>             
-            </div>
-        </div>
+    const resultsNav = (
 
-        </div>
-        )
-      })
-    ) : (
-      <div className="center">No results match</div>
+      <div>
+        {/*  tabs  */}
+        <ul className="tabs">
+          <li className="tab ">
+            <NavLink to="#Fuel" className="active indigo-text text-darken-4 flow-text">{this.props.results.fsTitle} </NavLink>
+          </li>
+          <li className="tab ">
+            <NavLink to="#Cost" className="active indigo-text text-darken-4 flow-text">{this.props.results.csTitle}</NavLink>
+          </li>
+          <li className="tab ">
+            <NavLink to="#Driven" className="active indigo-text text-darken-4 flow-text">{this.props.results.akdTitle}</NavLink>
+          </li>
+          <li className="tab ">
+            <NavLink to="#Enviromental" className="active indigo-text text-darken-4 flow-text">{this.props.results.esTitle}</NavLink>
+          </li>
+        </ul>      
+      </div>
+
     );
+
+    const fuelResults = (
+
+      <div className="col s12 l6 offset-l2">      
+        <div id="Fuel" path='/Fuel' className="col s12">
+          <div className="card">
+            <div className="card-content">
+              <p className="card-title">{this.props.results.fSavings}L</p>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    )
+
+    const costResults = (
+
+      <div className="col s12 l6 offset-l2">
+        <div id="Cost" path='/Cost' className="col s12">
+          <div className="card">
+            <div className="card-content">
+              <p className="card-title">£{this.props.results.cSavings}</p>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    )
+
+    const drivenResults = (
+
+      <div className="col s12 l6 offset-l2">
+        <div id="Driven" path='/Driven' className="col s12">
+           <div className="card">
+            <div className="card-content">
+              <p className="card-title">{this.props.results.akdSavings}</p>            
+              <p>{this.props.results.akdSubT}</p>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    )
+
+    const enviromentalResults = (
+
+      <div className="col s12 l6 offset-l2">
+        <div id="Enviromental" path='/Enviromental' className="col s12">
+          <div className="card">
+            <div className="card-content">
+              <p className="card-title">{this.props.results.eSavings}Kg</p>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    )
 
     return (
       <div>
-        <div className="container home">
+        <div className="container section">
           <h4 className="center">Results</h4>
-          {resultsData}
+          {resultsNav}
+          {fuelResults}
+          {costResults}
+          {drivenResults}
+          {enviromentalResults}
         </div>
       </div>
     )
@@ -36,7 +100,7 @@ class Results extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        userResults: state.results.userResults
+        results: state.results.userResults
     }
   }
   

@@ -84,13 +84,11 @@ class Summary extends Component {
                     </tr>
                 </tbody>
             </table>
-
         </div>
     )
-
-
-      const annualSavings = (
-
+        
+    // Annual Savings Result
+    const annualSavings = (
         <table className="card highlight flow-text ">
             <thead>
                 <tr>
@@ -103,7 +101,7 @@ class Summary extends Component {
                 </tr>
             </tbody>
         </table>
-      )
+    )
 
     return (
       <div>
@@ -132,48 +130,3 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps)(Summary)
 
 
-
-
-
-
-
-// import React from "react";
-
-// const Summary = () => {
-//   console.log();
-//     return (
-//         <div className="container">
-//             <h4 className="center" >This is the Summary page</h4>
-//             <p>Lorem ipsum is a placeholder text (filler text) in publishing and graphic design. It is used to demonstrate the graphics elements of a document, such as font, typography, and layout.</p>
-//             <table>
-//                 <thead>
-//                 <tr>
-//                     <th>Name</th>
-//                     <th>Item Name</th>
-//                     <th>Item Price</th>
-//                 </tr>
-//                 </thead>
-
-//                 <tbody>
-//                 <tr>
-//                     <td>Alvin</td>
-//                     <td>Eclair</td>
-//                     <td>$0.87</td>
-//                 </tr>
-//                 <tr>
-//                     <td>Alan</td>
-//                     <td>Jellybean</td>
-//                     <td>$3.76</td>
-//                 </tr>
-//                 <tr>
-//                     <td>Jonathan</td>
-//                     <td>Lollipop</td>
-//                     <td>$7.00</td>
-//                 </tr>
-//                 </tbody>
-//             </table>
-//         </div>
-//         )
-//     }
-
-// export default Summary;

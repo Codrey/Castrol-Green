@@ -1,14 +1,38 @@
 const initState = {
-    userResults: [
-      {id: '1', title: 'Fuel Savings', savings: 1000 },
-      {id: '2', title: 'Cost Savings', savings: 10050 },
-      {id: '3', title: 'Additional Km Driven', savings: 25113 },
-      {id: '4', title: 'Enviromental Savings', savings: 250 }
-    ]
+  userResults: {
+    fsTitle: 'Fuel Savings', fSavings: 1000,
+    csTitle: 'Cost Savings', cSavings: 10050,
+    akdTitle: 'Additional Km Driven', akdSavings: 25113, akdSubT: 'Extra Kms Saved',
+    esTitle: 'Enviromental Savings', eSavings: 250
   }
+}
   
 const resultsReducer = (state = initState, action) => {
-  return state;
-}
+
+ /*  switch (action.type) {
+    case "AGE_UP":
+      return {
+        ...state,
+        age: state.age + action.value,
+      };
+      break;
+
+    case "AGE_DOWN":
+      return {
+        ...state,
+        age: state.age + action.value,
+      };
+      break;
+    case "DEL_ENTRY":
+      return {
+        ...state,
+      }
+      break;
+  } */
+    return state;
+};
+
+
 
 export default resultsReducer;
+
