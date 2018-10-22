@@ -11,7 +11,7 @@ class Intro extends Component {
     }
     render() {
         const LandingPage = () => (
-            <div className="container center row BG">
+            <div className="container center row BG intoCon">
                 <h3 className="card-title ">
                     <span>{this.state.welcome}</span>
                     <br />

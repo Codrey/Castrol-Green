@@ -105,13 +105,23 @@ class Summary extends Component {
 
     return (
       <div>
-        <div className="container home">
-
-          {costData}
-          {travelData}
-          {environmentalData}
-          {annualSavings}
-            
+        <div className="container z-depth-5">
+          <div className="row" >
+                <div className="col m6 z-depth-2">
+                    {costData}
+                </div>
+                <div className="col m6">
+                    {travelData}
+                </div>
+          </div>
+          <div className="row" >
+                <div className="col m6 l6">
+                {environmentalData}
+                </div>
+                <div className="col s12 m6 l6 z-depth-5">
+                    {annualSavings}
+                </div>
+          </div>
         </div>
       </div>
     );

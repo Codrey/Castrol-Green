@@ -35,7 +35,7 @@ class FleetInput extends Component {
     const hcVehicle = (
       <div>
         <div className="card col m4 input">
-          <div className="card-content">
+          <div className="card-panel">
             <h1 className="card-title red-text">{this.props.fleet.hcvTitle}</h1>
             <div>
               <span>{this.props.fleet.cmTitle}</span>
@@ -77,7 +77,7 @@ class FleetInput extends Component {
     const mcVehicle = (
       <div>
         <div className="card col m4 input">
-          <div className="card-content">
+          <div className="card-panel">
             <h1 className="card-title red-text">{this.props.fleet.mcvTitle}</h1>
             <div>
               <span>{this.props.fleet.cmTitle}</span>
@@ -119,7 +119,7 @@ class FleetInput extends Component {
     const lcVehicle = (
       <div>
         <div className="card col m4 input">
-          <div className="card-content">
+          <div className="card-panel">
             <h1 className="card-title red-text">{this.props.fleet.lcvTitle}</h1>
             <div>
               <span>{this.props.fleet.cmTitle}</span>

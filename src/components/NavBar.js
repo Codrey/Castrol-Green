@@ -10,7 +10,7 @@ const NavBar = () => {
           <div className="container">
             <NavLink to="/" data-target="mobile-demo" class="sidenav-trigger sLogoSize">
               <i class="material-icons">menu</i>
-              <img className="hide-on-med-and-up" src={castLogo} alt="Castrol Oil Vecton" />
+              <img className="hide-on-large-and-up" src={castLogo} alt="Castrol Oil Vecton" />
             </NavLink>
             <Link to="/" className="logoSize hide-on-small-only">
               <img className="hide-on-med-and-down" src={castLogo} alt="Castrol Oil Vecton" />

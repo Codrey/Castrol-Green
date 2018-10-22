@@ -13,6 +13,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../src/assets/Castrol-Team_BG_sm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -96,9 +99,47 @@ code {
     margin-top: -6.7em;
 }
 
+.intoCon {
+    margin-top: 1em !important;
+}
+
 .pos {
     position: relative !important;
 }
+
+td, th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+    font-size: medium;
+}
+
+.row {
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+ /* Media Queries */
+ @media only screen and (min-width: 1200px) {
+    .logoSize > img {
+        width: 20vw !important;
+        margin-left: 25em;
+        margin-top: -4.5em;
+    }
+ }
+
+@media only screen and (min-width: 768px) {
+    .sLogoSize > img {
+        position: relative;
+        width: 30vw !important;
+        margin-left: 29em;
+        margin-top: -8em;
+    }
+} 
 
 
 @media only screen and (min-width: 2560px) {
