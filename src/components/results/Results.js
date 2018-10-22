@@ -6,7 +6,7 @@ class Results extends Component {
   render(){
     const resultsNav = (
 
-      <div>
+    <React.Fragment>
         {/*  tabs  */}
         <ul className="tabs">
           <li className="tab ">
@@ -22,7 +22,7 @@ class Results extends Component {
             <NavLink to="#Enviromental" className="active indigo-text text-darken-4 flow-text">{this.props.results.esTitle}</NavLink>
           </li>
         </ul>      
-      </div>
+      </React.Fragment>
 
     );
 
@@ -92,7 +92,7 @@ class Results extends Component {
           {costResults}
           {drivenResults}
           {enviromentalResults}
-        </div>
+        </div>               
       </div>
     )
   }
@@ -105,6 +105,3 @@ const mapStateToProps = (state) => {
   }
   
 export default connect(mapStateToProps)(Results)
-
-
-

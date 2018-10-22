@@ -11,13 +11,18 @@ class Intro extends Component {
     }
     render() {
         const LandingPage = () => (
-            <div className="container center">
-                <h1 className="">{this.state.welcome}</h1>
-                <h1 className="">{this.state.title}</h1>
-                <img className="container" src={vectonIMG} alt="Castrol Oil Vecton" />
-                <p>{this.state.description}</p>
-                <Link to="/fleetinput" className="btn">Start</Link>
-                <p>{this.state.smallPrint}</p>
+            <div className="container center row BG">
+                <h3 className="card-title ">
+                    <span>{this.state.welcome}</span>
+                    <br />
+                    <span>{this.state.title}</span>
+                </h3>
+                <div className="">                
+                    <img className="container center col s12 m6 offset-m3 z-depth-1" src={vectonIMG} alt="Castrol Oil Vecton" />
+                    <p className="col m12 pText" >{this.state.description}</p>
+                    <Link to="/fleetinput" className="btn col s6 offset-s3 m6 offset-m3 z-depth-5">Start</Link>
+                </div>                    
+                <p className="col s12 m6 offset-m3 whiteText z-depth-5">{this.state.smallPrint}</p>
             </div>
         )     
         return (

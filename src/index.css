@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -14,8 +21,8 @@ code {
 }
 
 .section{
-    padding-top: 4vw;
-    padding-bottom: 4vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
 }
 .tabs .indicator{
     background-color: #1d7e1a;
@@ -37,3 +44,77 @@ code {
     line-height: 1;
     padding-left: 10px;
 }
+
+
+.btn, .btn-large, .btn-small {
+    margin: 2ch;
+    text-decoration: none;
+    color: #fff;
+    background-color: #169716;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+}
+
+.BG {
+    background-image: url("../src/assets/Castrol-Team_BG_sm.jpg");
+    background-color: white;
+    background-blend-mode: hard-light;}
+
+.pText {
+    color: black !important;
+    font-weight: bolder;
+}
+
+.tText {
+    line-height: 1ch !important;
+    font-weight: bold;
+}
+
+.sidenav {
+    background-image: url("../src/assets/Castrol-Team_BG_sm.jpg");
+    background-color: #169716;
+    padding: 13ch;
+}
+
+.nPad {
+    padding: 9ch;
+}
+
+.logoSize > img {
+    width: 20vw !important;
+    margin-left: 11em;
+    margin-top: -2.5em;
+}
+
+.sLogoSize > img {
+    position: relative;
+    width: 50vw !important;
+    margin-left: 10em;
+    margin-top: -6.7em;
+}
+
+.pos {
+    position: relative !important;
+}
+
+
+@media only screen and (min-width: 2560px) {
+
+    .logoSize > img {
+        width: 10vw !important;
+        margin-left: 40em;
+        margin-top: -3.5em;
+    }
+
+    .BG {
+        background-image: url(/static/media/Castrol-Team_BG_sm.6bcd8983.jpg);
+        background-repeat: no-repeat;
+        background-color: white;
+        background-blend-mode: hard-light;
+        background-size: 100vh;
+    }
+}
+
