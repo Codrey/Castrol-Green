@@ -161,7 +161,7 @@ class FleetInput extends Component {
     return (
       <div>
         <div className="container row ">
-          <h4 className="center">Fleet Input</h4>
+          <h4 className=" center ">Fleet Input</h4>
           {hcVehicle}
           {mcVehicle}
           {lcVehicle}

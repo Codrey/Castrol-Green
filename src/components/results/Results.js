@@ -4,13 +4,15 @@ import { NavLink } from 'react-router-dom'
 
 class Results extends Component {
   render(){
+
     const resultsNav = (
 
     <React.Fragment>
+
         {/*  tabs  */}
         <ul className="tabs">
           <li className="tab ">
-            <NavLink to="#Fuel" className="active indigo-text text-darken-4 flow-text">{this.props.results.fsTitle} </NavLink>
+            <NavLink to="#Fuel" className="active indigo-text text-darken-4 flow-text">{this.props.results.fsTitle}</NavLink>
           </li>
           <li className="tab ">
             <NavLink to="#Cost" className="active indigo-text text-darken-4 flow-text">{this.props.results.csTitle}</NavLink>
@@ -28,7 +30,7 @@ class Results extends Component {
 
     const fuelResults = (
 
-      <div className="col s12 l6 offset-l2">      
+      <div className="col s12 l6 offset-l2 z-depth-3">      
         <div id="Fuel" path='/Fuel' className="col s12">
           <div className="card">
             <div className="card-content">
@@ -42,7 +44,7 @@ class Results extends Component {
 
     const costResults = (
 
-      <div className="col s12 l6 offset-l2">
+      <div className="col s12 l6 offset-l2 z-depth-3">
         <div id="Cost" path='/Cost' className="col s12">
           <div className="card">
             <div className="card-content">
@@ -56,7 +58,7 @@ class Results extends Component {
 
     const drivenResults = (
 
-      <div className="col s12 l6 offset-l2">
+      <div className="col s12 l6 offset-l2 z-depth-3">
         <div id="Driven" path='/Driven' className="col s12">
            <div className="card">
             <div className="card-content">
@@ -71,7 +73,7 @@ class Results extends Component {
 
     const enviromentalResults = (
 
-      <div className="col s12 l6 offset-l2">
+      <div className="col s12 l6 offset-l2 z-depth-3">
         <div id="Enviromental" path='/Enviromental' className="col s12">
           <div className="card">
             <div className="card-content">
@@ -92,7 +94,26 @@ class Results extends Component {
           {costResults}
           {drivenResults}
           {enviromentalResults}
-        </div>               
+        </div>  
+        <ul class="collapsible">
+          <li>
+            <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
+            <div className="collapsible-body"><span>{fuelResults}</span></div>
+          </li>
+          <li>
+            <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
+            <div className="collapsible-body"><span>{costResults}</span></div>
+          </li>
+          <li>
+            <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
+            <div className="collapsible-body"><span>{drivenResults}</span></div>
+          </li>
+          <li>
+            <div className="collapsible-header"><i className="material-icons">hotshot</i>Four</div>
+            <div className="collapsible-body"><span>{enviromentalResults}</span></div>
+          </li>
+        </ul>
+                  
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink, withRouter } from "react-router-dom"
 
 import castLogo from '../assets/castrol-logo-vector.png';
+import smcastLogo from '../assets/favicon.png';
 
 const NavBar = () => {
   return (
@@ -23,7 +24,10 @@ const NavBar = () => {
             </ul>
           </div>
         </nav>
+
+        {/* Side Nav */}
         <ul class="sidenav scale-transition" id="mobile-demo">
+           <img className="smcastLogo" src={smcastLogo} alt="Castrol Oil Vecton" />
             <li>
                 <NavLink class="sidenav-close z-depth-2 nPad" to="/">Intro</NavLink>
             </li>

@@ -22,7 +22,7 @@ class Intro extends Component {
                     <p className="col m12 pText" >{this.state.description}</p>
                     <Link to="/fleetinput" className="btn col s6 offset-s3 m6 offset-m3 z-depth-5">Start</Link>
                 </div>                    
-                <p className="col s12 m6 offset-m3 whiteText z-depth-5">{this.state.smallPrint}</p>
+                <p className="col s12 m6 offset-m3 whiteText z-depth-5 pText">{this.state.smallPrint}</p>
             </div>
         )     
         return (
